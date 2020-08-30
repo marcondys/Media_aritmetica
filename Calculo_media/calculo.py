@@ -1,16 +1,21 @@
-def calc(nota0, nota1, nota2):
-     media = (nota0 + nota1 + nota2) / 3
-     print(f'Sua média é: {media}')
+"""Módulo para calcular média aritmética de notas."""
 
 
+def calcula_media():
+    """Função não recebe parametros."""
+    nota = None
+    lista_notas = []
+    while nota != 0.0:
+        nota = float(input('Digite sua nota ou 0 (zero) para terminar: '))
+        if nota != 0.0:
+            lista_notas.append(nota)
+        else:
+            break
+    quantidade = len(lista_notas)
+    soma = sum(lista_notas)
+    media = soma / quantidade
+    print(f'Sua média é: {media}')
 
 
-contador = 0
-while contador < 1:
-    result0 = float(input("Primeira nota: "))
-    result1 = float(input("Segunda nota: "))
-    result2 = float(input("Terceira nota: "))
-    contador += 1
-
-calc(result0, result1, result2)
-
+if __name__ == '__main__':
+    calcula_media()
