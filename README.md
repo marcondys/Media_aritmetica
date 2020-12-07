@@ -1,1 +1,1 @@
-# Media_aritmetica
+# Media_aritmética
